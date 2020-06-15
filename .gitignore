@@ -4,6 +4,7 @@ package-lock.json
 dist/
 .firebase/
 yarn.lock
+src/helpers/apiKeys.json
 
 # dependencies
 /node_modules
