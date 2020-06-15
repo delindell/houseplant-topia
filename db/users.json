@@ -1,0 +1,32 @@
+{
+  "user1": {
+    "uid": "MYIdioaldEF22",
+    "name": "Davis",
+    "phone": 5024359443,
+    "email": "daviselindell@gmail.com"
+  },
+  "user2": {
+    "uid": "uaUEJaefdf",
+    "name": "Rick",
+    "phone": 6541234567,
+    "email": "dogma@gmail.com"
+  },
+  "user3": {
+    "uid": "12345",
+    "name": "Sarah",
+    "phone": 4561237894,
+    "email": "getsumpin@gmail.com"
+  },
+  "user4": {
+    "uid": "LKJIJFfda57",
+    "name": "Upton",
+    "phone": 1234567894,
+    "email": "gettingbetter@gmail.com"
+  },
+  "user5": {
+    "uid": "fsfsdf5815",
+    "name": "Monica",
+    "phone": 4567890235,
+    "email": "yepps@gmail.com"
+  }
+}

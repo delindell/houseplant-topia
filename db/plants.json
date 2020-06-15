@@ -1,0 +1,156 @@
+{
+  "plant10": {
+    "type": "Pothos",
+    "nickname": "Richard",
+    "imgUrl": "https://www.gardeningknowhow.com/wp-content/uploads/2010/02/pothos1.jpg",
+    "resource": "https://www.thespruce.com/pothos-an-easy-to-grow-houseplant-1403154",
+    "health": "Healthy",
+    "dateCreated": 1519211809934,
+    "notes": "blah blah blah",
+    "roomId": "room5",
+    "uid": "PlANt23Ue"
+  },
+  "plant11": {
+    "type": "Peace Lily",
+    "nickname": "James",
+    "imgUrl": "https://cdn11.bigcommerce.com/s-9ss4ehqfnb/images/stencil/1280x1280/attribute_rule_images/124_source_1563899733.jpg",
+    "resource": "https://www.proflowers.com/blog/peace-lily-care",
+    "health": "Ill",
+    "dateCreated": 1519211809934,
+    "notes": "blah blah blah",
+    "roomId": "room4",
+    "uid": "PlANt23Ue"
+  },
+  "plant12": {
+    "type": "Money Tree",
+    "nickname": "Trent",
+    "imgUrl": "https://images-na.ssl-images-amazon.com/images/I/61hhXTcSU0L._AC_SL1000_.jpg",
+    "resource": "https://www.apartmenttherapy.com/money-tree-plants-our-best-tips-for-growing-and-care-239893",
+    "health": "Healthy",
+    "dateCreated": 1519211809934,
+    "notes": "blah blah blah",
+    "roomId": "room5",
+    "uid": "PlANt23Ue"
+  },
+  "plant13": {
+    "type": "Fiddle Leaf Fig",
+    "nickname": "Miles",
+    "imgUrl": "https://cdn.shopify.com/s/files/1/0013/3529/6118/products/Kent-48-3265.048-WH_Fiddle-Leaf-Fig-Tree-14.jpg?v=1590447682",
+    "resource": "https://www.gardenista.com/posts/10-things-nobody-tells-fiddle-leaf-fig-trees-houseplant-growing-care-guide/",
+    "health": "Questionable",
+    "dateCreated": 1519211809934,
+    "notes": "blah blah blah",
+    "roomId": "room6",
+    "uid": "PlANt23Ue"
+  },
+  "plant14": {
+    "type": "Snake Plant",
+    "nickname": "Eugene",
+    "imgUrl": "https://res.cloudinary.com/bloomnation/c_pad,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto/v1531805706/vendor/6301/catalog/product/2/0/20180626082638_file_5b32a17e1bd23.jpg",
+    "resource": "https://www.gardeningknowhow.com/houseplants/snake-plant/snake-plant-care.htm",
+    "health": "Healthy",
+    "dateCreated": 1519211809934,
+    "notes": "blah blah blah",
+    "roomId": "room2",
+    "uid": "PlANt23Ue"
+  },
+  "plant15": {
+    "type": "Spider Plant",
+    "nickname": "Zoe",
+    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Hierbabuena_0611_Revised.jpg",
+    "resource": "https://www.gardeningknowhow.com/houseplants/spider-plant/spider-plant-care-gardening-tips-for-spider-plants.htm",
+    "health": "Dying",
+    "dateCreated": 1519211809934,
+    "notes": "blah blah blah",
+    "roomId": "room7",
+    "uid": "PlANt23Ue"
+  },
+  "plant16": {
+    "type": "Chinese Evergreen",
+    "nickname": "Todd",
+    "imgUrl": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1557258847-chinese-evergreen-houseplant-1557258690.jpg?crop=0.883xw:0.887xh;0.0849xw,0.0821xh&resize=768:*",
+    "resource": "https://www.gardeningknowhow.com/houseplants/chinese-evergreen/chinese-evergreen-plants.htm",
+    "health": "Healthy",
+    "dateCreated": 1519211809934,
+    "notes": "blah blah blah",
+    "roomId": "room5",
+    "uid": "PlANt23Ue"
+  },
+  "plant17": {
+    "type": "Asparagus Fern",
+    "nickname": "Duncan",
+    "imgUrl": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1554477330-beautiful-asparagus-fern-plant-in-a-basket-royalty-free-image-972247932-1546889240.jpg?crop=0.547xw:0.361xh;0.393xw,0.317xh&resize=768:*",
+    "resource": "https://www.gardeningknowhow.com/ornamental/foliage/asparagus-fern/asparagus-fern-care.htm",
+    "health": "Healthy",
+    "dateCreated": 1519211809934,
+    "notes": "blah blah blah",
+    "roomId": "room3",
+    "uid": "PlANt23Ue"
+  },
+  "plant18": {
+    "type": "Pilea",
+    "nickname": "Raelle",
+    "imgUrl": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1557177323-pilea-peperomioides-money-plant-in-the-pot-single-royalty-free-image-917778022-1557177295.jpg?crop=1.00xw:0.668xh;0,0.269xh&resize=768:*",
+    "resource": "https://savvygardening.com/pilea-peperomioides-care/",
+    "health": "Healthy",
+    "dateCreated": 1519211809934,
+    "notes": "blah blah blah",
+    "roomId": "room1",
+    "uid": "PlANt23Ue"
+  },
+  "plant19": {
+    "type": "Yucca",
+    "nickname": "Westerfield",
+    "imgUrl": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1554477877-room-royalty-free-image-139572993-1546888866.jpg?crop=0.364xw:0.540xh;0,0.257xh&resize=768:*",
+    "resource": "https://www.gardeningknowhow.com/ornamental/foliage/yucca/growing-yucca-indoors.htm",
+    "health": "Healthy",
+    "dateCreated": 1519211809934,
+    "notes": "blah blah blah",
+    "roomId": "room3",
+    "uid": "PlANt23Ue"
+  },
+  "plant20": {
+    "type": "Chirstmas Cactus",
+    "nickname": "Ted",
+    "imgUrl": "https://www.gardeningknowhow.com/wp-content/uploads/2015/01/young-christmas-cactus.jpg",
+    "resource": "https://www.goodhousekeeping.com/home/gardening/a20705680/christmas-cactus-care/",
+    "health": "Healthy",
+    "dateCreated": 1519211809934,
+    "notes": "blah blah blah",
+    "roomId": "room7",
+    "uid": "PlANt23Ue"
+  },
+  "plant21": {
+    "type": "Peperomia",
+    "nickname": "Ricardo",
+    "imgUrl": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1557178246-an-elegant-green-pot-plant-as-room-decoration-royalty-free-image-1131755421-1557178015.jpg?crop=0.585xw:0.880xh;0.0545xw,0.0892xh&resize=768:*",
+    "resource": "https://www.thespruce.com/peperomia-plant-4584414",
+    "health": "Healthy",
+    "dateCreated": 1519211809934,
+    "notes": "blah blah blah",
+    "roomId": "room4",
+    "uid": "PlANt23Ue"
+  },
+  "plant22": {
+    "type": "Air Plant",
+    "nickname": "Veronica",
+    "imgUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Flittleprinceplants.com%2Four-plants%2Fterrarium-plants%2Fopen-terrariums%2Fair-plant-tillandsia-brachycaulos-v-multiflora-one-plant%2F&psig=AOvVaw2cBvwO4FATGp2cTJZbFY6t&ust=1592318727527000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIjP0dKHhOoCFQAAAAAdAAAAABAE",
+    "resource": "https://www.airplantcity.com/pages/air-plant-care",
+    "health": "Questionable",
+    "dateCreated": 1519211809934,
+    "notes": "blah blah blah",
+    "roomId": "room4",
+    "uid": "PlANt23Ue"
+  },
+  "plant23": {
+    "type": "Aloe",
+    "nickname": "Chubbs",
+    "imgUrl": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1557179472-aloe-in-the-plastic-pot-royalty-free-image-510963128-1557179415.jpg?crop=1.00xw:0.668xh;0,0.0988xh&resize=768:*",
+    "resource": "https://www.gardeningknowhow.com/houseplants/aloe-vera/aloe-vera-plant-care.htm",
+    "health": "Healthy",
+    "dateCreated": 1519211809934,
+    "notes": "blah blah blah",
+    "roomId": "room4",
+    "uid": "PlANt23Ue"
+  }
+}

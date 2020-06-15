@@ -1,0 +1,74 @@
+{
+  "room1": {
+    "name": "Office",
+    "numOfWindows": 2,
+    "sunDuration": 5,
+    "sunDirection": "South",
+    "sunIntensity": "Low",
+    "uid": "Y3udWi93"
+  },
+  "room2": {
+    "name": "Living Room",
+    "numOfWindows": 4,
+    "sunDuration": 3,
+    "sunDirection": "North",
+    "sunIntensity": "High",
+    "uid": "fSIEF4"
+  },
+  "room3": {
+    "name": "Kitchen",
+    "numOfWindows": 1,
+    "sunDuration": 3,
+    "sunDirection": "East",
+    "sunIntensity": "Low",
+    "uid": "Y3udWi93"
+  },
+  "room4": {
+    "name": "Master Bedroom",
+    "numOfWindows": 2,
+    "sunDuration": 5,
+    "sunDirection": "North",
+    "sunIntensity": "Medium",
+    "uid": "Y3udWi93"
+  },
+  "room5": {
+    "name": "Spare Bedroom",
+    "numOfWindows": 1,
+    "sunDuration": 4,
+    "sunDirection": "South",
+    "sunIntensity": "Low",
+    "uid": "Y3udWi93"
+  },
+  "room6": {
+    "name": "Bathroom",
+    "numOfWindows": 1,
+    "sunDuration": 3,
+    "sunDirection": "South",
+    "sunIntensity": "Low",
+    "uid": "Y3udWi93"
+  },
+  "room7": {
+    "name": "Dining Room",
+    "numOfWindows": 3,
+    "sunDuration": 5,
+    "sunDirection": "South",
+    "sunIntensity": "High",
+    "uid": "Y3udWi93"
+  },
+  "room8": {
+    "name": "Sun Room",
+    "numOfWindows": 4,
+    "sunDuration": 5,
+    "sunDirection": "South",
+    "sunIntensity": "High",
+    "uid": "Y3udWi93"
+  },
+  "room9": {
+    "name": "Office",
+    "numOfWindows": 2,
+    "sunDuration": 5,
+    "sunDirection": "South",
+    "sunIntensity": "Low",
+    "uid": "shfjkshg"
+  }
+}
