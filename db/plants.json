@@ -7,6 +7,7 @@
     "health": "Healthy",
     "dateCreated": 1519211809934,
     "notes": "blah blah blah",
+    "waterFrequency": 5,
     "roomId": "room5",
     "uid": "PlANt23Ue"
   },
@@ -18,6 +19,7 @@
     "health": "Ill",
     "dateCreated": 1519211809934,
     "notes": "blah blah blah",
+    "waterFrequency": 5,
     "roomId": "room4",
     "uid": "PlANt23Ue"
   },
@@ -29,6 +31,7 @@
     "health": "Healthy",
     "dateCreated": 1519211809934,
     "notes": "blah blah blah",
+    "waterFrequency": 5,
     "roomId": "room5",
     "uid": "PlANt23Ue"
   },
@@ -40,6 +43,7 @@
     "health": "Questionable",
     "dateCreated": 1519211809934,
     "notes": "blah blah blah",
+    "waterFrequency": 5,
     "roomId": "room6",
     "uid": "PlANt23Ue"
   },
@@ -51,6 +55,7 @@
     "health": "Healthy",
     "dateCreated": 1519211809934,
     "notes": "blah blah blah",
+    "waterFrequency": 5,
     "roomId": "room2",
     "uid": "PlANt23Ue"
   },
@@ -62,6 +67,7 @@
     "health": "Dying",
     "dateCreated": 1519211809934,
     "notes": "blah blah blah",
+    "waterFrequency": 5,
     "roomId": "room7",
     "uid": "PlANt23Ue"
   },
@@ -73,6 +79,7 @@
     "health": "Healthy",
     "dateCreated": 1519211809934,
     "notes": "blah blah blah",
+    "waterFrequency": 5,
     "roomId": "room5",
     "uid": "PlANt23Ue"
   },
@@ -84,6 +91,7 @@
     "health": "Healthy",
     "dateCreated": 1519211809934,
     "notes": "blah blah blah",
+    "waterFrequency": 5,
     "roomId": "room3",
     "uid": "PlANt23Ue"
   },
@@ -95,6 +103,7 @@
     "health": "Healthy",
     "dateCreated": 1519211809934,
     "notes": "blah blah blah",
+    "waterFrequency": 5,
     "roomId": "room1",
     "uid": "PlANt23Ue"
   },
@@ -106,6 +115,7 @@
     "health": "Healthy",
     "dateCreated": 1519211809934,
     "notes": "blah blah blah",
+    "waterFrequency": 5,
     "roomId": "room3",
     "uid": "PlANt23Ue"
   },
@@ -117,6 +127,7 @@
     "health": "Healthy",
     "dateCreated": 1519211809934,
     "notes": "blah blah blah",
+    "waterFrequency": 5,
     "roomId": "room7",
     "uid": "PlANt23Ue"
   },
@@ -128,6 +139,7 @@
     "health": "Healthy",
     "dateCreated": 1519211809934,
     "notes": "blah blah blah",
+    "waterFrequency": 5,
     "roomId": "room4",
     "uid": "PlANt23Ue"
   },
@@ -139,6 +151,7 @@
     "health": "Questionable",
     "dateCreated": 1519211809934,
     "notes": "blah blah blah",
+    "waterFrequency": 5,
     "roomId": "room4",
     "uid": "PlANt23Ue"
   },
@@ -150,6 +163,7 @@
     "health": "Healthy",
     "dateCreated": 1519211809934,
     "notes": "blah blah blah",
+    "waterFrequency": 5,
     "roomId": "room4",
     "uid": "PlANt23Ue"
   }
