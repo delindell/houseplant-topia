@@ -1,4 +1,7 @@
 import React from 'react';
+
+import Auth from '../components/Auth/Auth';
+
 import './App.scss';
 
 class App extends React.Component {
@@ -6,7 +9,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>House Plant Shizz</h1>
-        <button className="btn btn-outline-warning"><i className="fab fa-acquisitions-incorporated"></i></button>
+        <Auth />
       </div>
     );
   }
