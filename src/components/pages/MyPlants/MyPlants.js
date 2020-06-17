@@ -4,6 +4,7 @@ import authData from '../../../helpers/data/authData';
 import plantsData from '../../../helpers/data/plantsData';
 
 import PlantCard from '../../shared/PlantCard/PlantCard';
+import PlantFormModal from '../../shared/PlantFormModal/PlantFormModal';
 
 import './MyPlants.scss';
 
@@ -11,6 +12,7 @@ import './MyPlants.scss';
 class MyPlants extends React.Component {
   state = {
     plants: [],
+    formOpen: false,
   }
 
   componentDidMount() {
@@ -24,13 +26,19 @@ class MyPlants extends React.Component {
       .catch((err) => console.error('error getting plants', err));
   }
 
+  formClose = (e) => {
+    e.preventDefault();
+    this.setState({ formOpen: false });
+  }
+
   render() {
-    const { plants } = this.state;
+    const { plants, formOpen } = this.state;
     const buildPlantCards = plants.map((plant) => <PlantCard plant={plant} key={plant.id} />);
     return (
       <div className="MyPlants">
         <h1>MyPlants</h1>
-        <button className="btn btn-success mb-3">Add New Plant</button>
+        <button className="btn btn-success mb-3" onClick={() => this.setState({ formOpen: true })}>Add New Plant</button>
+        { formOpen ? <PlantFormModal formClose={this.formClose} /> : ''}
         <div className="d-flex flex-wrap">
           {buildPlantCards}
         </div>
