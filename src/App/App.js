@@ -9,7 +9,13 @@ import {
   Switch,
 } from 'react-router-dom';
 
-import Auth from '../components/Auth/Auth';
+import Auth from '../components/pages/Auth/Auth';
+import MyNavBar from '../components/shared/MyNavBar/MyNavBar';
+import MyPlants from '../components/pages/MyPlants/MyPlants';
+import MyRooms from '../components/pages/MyRooms/MyRooms';
+import RoomSingleView from '../components/pages/RoomSingleView/RoomSingleView';
+import PlantSingleView from '../components/pages/PlantSingleView/PlantSingleView';
+import UserProfile from '../components/pages/UserProfile/UserProfile';
 import fbConnection from '../helpers/data/connection';
 
 import './App.scss';
@@ -20,7 +26,7 @@ fbConnection();
 const PublicRoute = ({ component: Component, authed, ...rest }) => {
   const routeChecker = (props) => (authed === false
     ? (<Component {...props} />)
-    : (<Redirect to={{ pathname: '/home', state: { from: props.location } }} />));
+    : (<Redirect to={{ pathname: '/plants', state: { from: props.location } }} />));
   return <Route {...rest} render={(props) => routeChecker(props)} />;
 };
 
@@ -54,8 +60,24 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <h1>House Plant Shizz</h1>
-        <Auth component={Auth} authed={authed}/>
+        <BrowserRouter>
+          <React.Fragment>
+            <MyNavBar authed={authed}/>
+            <div className="container">
+              <div className="row">
+                <Switch>
+                  <PrivateRoute path='/profile/:userId' component={UserProfile} authed={authed} />
+                  <PrivateRoute path='/rooms/:roomId' component={RoomSingleView} authed={authed} />
+                  <PrivateRoute path='/plants/:plantId' component={PlantSingleView} authed={authed} />
+                  <PrivateRoute path='/plants' component={MyPlants} authed={authed} />
+                  <PrivateRoute path='/rooms' component={MyRooms} authed={authed} />
+                  <PublicRoute path='/auth' component={Auth} authed={authed} />
+                  <Redirect from="*" to="/my-plants" />
+                </Switch>
+              </div>
+            </div>
+          </React.Fragment>
+        </BrowserRouter>
       </div>
     );
   }
