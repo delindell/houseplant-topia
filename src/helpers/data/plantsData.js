@@ -21,7 +21,10 @@ const getPlantsByUid = (uid) => new Promise((resolve, reject) => {
 
 const getSinglePlant = (plantId) => axios.get(`${baseUrl}/plants/${plantId}.json`);
 
+const deletePlant = (plantId) => axios.delete(`${baseUrl}/plants/${plantId}.json`);
+
 export default {
   getPlantsByUid,
   getSinglePlant,
+  deletePlant,
 };
