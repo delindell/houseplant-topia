@@ -5,7 +5,7 @@
     "sunDuration": 5,
     "sunDirection": "South",
     "sunIntensity": "Low",
-    "uid": "Y3udWi93"
+    "uid": "7q2aI8T8A6MVjvMKgtv7SKNyJPB2"
   },
   "room2": {
     "name": "Living Room",
@@ -13,7 +13,7 @@
     "sunDuration": 3,
     "sunDirection": "North",
     "sunIntensity": "High",
-    "uid": "fSIEF4"
+    "uid": "7q2aI8T8A6MVjvMKgtv7SKNyJPB2"
   },
   "room3": {
     "name": "Kitchen",
@@ -21,7 +21,7 @@
     "sunDuration": 3,
     "sunDirection": "East",
     "sunIntensity": "Low",
-    "uid": "Y3udWi93"
+    "uid": "7q2aI8T8A6MVjvMKgtv7SKNyJPB2"
   },
   "room4": {
     "name": "Master Bedroom",
@@ -29,7 +29,7 @@
     "sunDuration": 5,
     "sunDirection": "North",
     "sunIntensity": "Medium",
-    "uid": "Y3udWi93"
+    "uid": "7q2aI8T8A6MVjvMKgtv7SKNyJPB2"
   },
   "room5": {
     "name": "Spare Bedroom",
@@ -37,7 +37,7 @@
     "sunDuration": 4,
     "sunDirection": "South",
     "sunIntensity": "Low",
-    "uid": "Y3udWi93"
+    "uid": "7q2aI8T8A6MVjvMKgtv7SKNyJPB2"
   },
   "room6": {
     "name": "Bathroom",
@@ -45,7 +45,7 @@
     "sunDuration": 3,
     "sunDirection": "South",
     "sunIntensity": "Low",
-    "uid": "Y3udWi93"
+    "uid": "7q2aI8T8A6MVjvMKgtv7SKNyJPB2"
   },
   "room7": {
     "name": "Dining Room",
@@ -53,7 +53,7 @@
     "sunDuration": 5,
     "sunDirection": "South",
     "sunIntensity": "High",
-    "uid": "Y3udWi93"
+    "uid": "7q2aI8T8A6MVjvMKgtv7SKNyJPB2"
   },
   "room8": {
     "name": "Sun Room",
@@ -61,7 +61,7 @@
     "sunDuration": 5,
     "sunDirection": "South",
     "sunIntensity": "High",
-    "uid": "Y3udWi93"
+    "uid": "7q2aI8T8A6MVjvMKgtv7SKNyJPB2"
   },
   "room9": {
     "name": "Office",
