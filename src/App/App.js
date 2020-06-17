@@ -16,6 +16,7 @@ import MyRooms from '../components/pages/MyRooms/MyRooms';
 import RoomSingleView from '../components/pages/RoomSingleView/RoomSingleView';
 import PlantSingleView from '../components/pages/PlantSingleView/PlantSingleView';
 import UserProfile from '../components/pages/UserProfile/UserProfile';
+
 import fbConnection from '../helpers/data/connection';
 
 import './App.scss';
@@ -66,7 +67,7 @@ class App extends React.Component {
             <div className="container">
               <div className="row">
                 <Switch>
-                  <PrivateRoute path='/profile/:userId' component={UserProfile} authed={authed} />
+                  <PrivateRoute path='/profile' component={UserProfile} authed={authed} />
                   <PrivateRoute path='/rooms/:roomId' component={RoomSingleView} authed={authed} />
                   <PrivateRoute path='/plants/:plantId' component={PlantSingleView} authed={authed} />
                   <PrivateRoute path='/plants' component={MyPlants} authed={authed} />
