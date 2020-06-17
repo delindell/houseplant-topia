@@ -32,8 +32,7 @@ class MyPlants extends React.Component {
       .catch((err) => console.error('failed to delete plant', err));
   }
 
-  formClose = (e) => {
-    e.preventDefault();
+  formClose = () => {
     this.setState({ formOpen: false });
   }
 
