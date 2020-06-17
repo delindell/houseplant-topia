@@ -26,9 +26,17 @@ class PlantSingleView extends React.Component {
     const { plant } = this.state;
     return (
       <div className="PlantSingleView">
-        <button className="btn btn-warning" onClick={this.killPlant}>X</button>
+        <button className="btn btn-warning mt-2" onClick={this.killPlant}>X</button>
         <h1>{plant.nickname}</h1>
         <img src={plant.imgUrl} alt="plant"/>
+        <div className="plant-info-container">
+          <p>Type: {plant.type}</p>
+          <p>Health: {plant.health}</p>
+          <p>Notes: {plant.notes}</p>
+          <p>Location: {plant.roomId}</p>
+          <p>{plant.nickname} needs to be watered every {plant.waterFrequency} days.</p>
+          <a href={plant.resource} className="btn btn-primary">Resource</a>
+        </div>
       </div>
     );
   }
