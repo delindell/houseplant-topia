@@ -30,6 +30,10 @@ class MyPlants extends React.Component {
     return (
       <div className="MyPlants">
         <h1>MyPlants</h1>
+        <button className="btn btn-success mb-3">Add New Plant</button>
+        <div className="d-flex flex-wrap">
+          {buildPlantCards}
+        </div>
       </div>
     );
   }
