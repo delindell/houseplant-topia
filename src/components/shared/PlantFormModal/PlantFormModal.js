@@ -26,17 +26,6 @@ class PlantFormModal extends React.Component {
     plantRoomId: '',
   }
 
-  // "type": "Aloe",
-  // "nickname": "Chubbs",
-  // "imgUrl": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1557179472-aloe-in-the-plastic-pot-royalty-free-image-510963128-1557179415.jpg?crop=1.00xw:0.668xh;0,0.0988xh&resize=768:*",
-  // "resource": "https://www.gardeningknowhow.com/houseplants/aloe-vera/aloe-vera-plant-care.htm",
-  // "health": "Healthy",
-  // "dateCreated": 1519211809934,
-  // "notes": "blah blah blah",
-  // "waterFrequency": 5,
-  // "roomId": "room4",
-  // "uid": "PlANt23Ue"
-
   toggle = () => {
     this.setState({ isOpen: !this.state.isOpen });
     this.setState({ modal: !this.state.modal });
