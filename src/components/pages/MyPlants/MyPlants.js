@@ -43,7 +43,7 @@ class MyPlants extends React.Component {
       <div className="MyPlants">
         <h1>MyPlants</h1>
         <button className="btn btn-success mb-3" onClick={() => this.setState({ formOpen: true })}>Add New Plant</button>
-        { formOpen ? <PlantFormModal formClose={this.formClose} /> : ''}
+        { formOpen ? <PlantFormModal formClose={this.formClose} getPlants={this.getPlants} /> : ''}
         <div className="d-flex flex-wrap">
           {buildPlantCards}
         </div>
