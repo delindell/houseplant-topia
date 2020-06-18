@@ -41,19 +41,19 @@ class MyNavBar extends React.Component {
       if (authed) {
         return (
           <Nav className="ml-auto" navbar>
-          <NavItem>
-            <NavLink tag={RRNavLink} to='/plants'>My Plants</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink tag={RRNavLink} to='/rooms'>My Rooms</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink tag={RRNavLink} to='/profile'>My Profile</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink className="btn" onClick={this.logoutEvent}>Logout</NavLink>
-          </NavItem>
-        </Nav>
+            <NavItem>
+              <NavLink tag={RRNavLink} to='/plants'>My Plants</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink tag={RRNavLink} to='/rooms'>My Rooms</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink tag={RRNavLink} to='/profile'>My Profile</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className="btn" onClick={this.logoutEvent}>Logout</NavLink>
+            </NavItem>
+          </Nav>
         );
       }
       return <Nav className="ml-auto" navbar></Nav>;
