@@ -85,7 +85,7 @@ class PlantFormModal extends React.Component {
       health: plantHealth,
       dateCreated: Date.now(),
       note: plantNotes,
-      waterFrequency: plantWateringFrequency,
+      waterFrequency: plantWateringFrequency * 1,
       roomId: plantRoomId,
       uid: authData.getUid(),
     };
