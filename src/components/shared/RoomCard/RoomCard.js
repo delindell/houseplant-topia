@@ -1,12 +1,28 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import './RoomCard.scss';
 
 class RoomCard extends React.Component {
   render() {
+    const { room } = this.props;
+    const singleLink = `rooms/${room.id}`;
+
     return (
-      <div className="RoomCard">
-        <h1>RoomCard</h1>
+      <div className="RoomCard col-3 mb-3">
+        <div className="card">
+          <div className="card-header">
+            <h3><strong>{room.name}</strong></h3>
+            <button className="btn btn-primary ml-3">X</button>
+          </div>
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">Number of Windows: {room.numOfWindows}</li>
+            <li className="list-group-item">Hours of Sun: {room.sunDuration}</li>
+            <li className="list-group-item">Sunlight Direction: {room.sunDirection}</li>
+            <li className="list-group-item">Sunlight Intensity: {room.sunIntensity}</li>
+          </ul>
+          <Link className="btn btn-secondary mt-1 mb-1" to={singleLink}>View Plants this Room</Link>
+          <button className="btn btn-success mb-1">Edit Room Details</button>
+        </div>
       </div>
     );
   }

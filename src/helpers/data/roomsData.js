@@ -19,4 +19,9 @@ const getRoomsByUid = (uid) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getRoomsByUid };
+const getSingleRoom = (roomId) => axios.get(`${baseUrl}/rooms/${roomId}.json`);
+
+export default {
+  getRoomsByUid,
+  getSingleRoom,
+};
