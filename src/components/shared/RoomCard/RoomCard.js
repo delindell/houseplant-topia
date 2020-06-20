@@ -4,15 +4,15 @@ import './RoomCard.scss';
 
 class RoomCard extends React.Component {
   render() {
-    const { room } = this.props;
-    const singleLink = `rooms/${room.id}`;
+    const { room, deleteRoom } = this.props;
+    const singleLink = `/rooms/${room.id}`;
 
     return (
       <div className="RoomCard col-3 mb-3">
         <div className="card">
           <div className="card-header">
             <h3><strong>{room.name}</strong></h3>
-            <button className="btn btn-primary ml-3">X</button>
+            <button className="btn btn-primary ml-3" onClick={() => deleteRoom(room.id)}>X</button>
           </div>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">Number of Windows: {room.numOfWindows}</li>
