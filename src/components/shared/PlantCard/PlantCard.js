@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './PlantCard.scss';
+import plantShape from '../../../helpers/data/propz/plantShape';
 
 class PlantCard extends React.Component {
+  static propTypes = {
+    plant: plantShape.plantShape,
+    killPlant: PropTypes.func.isRequired,
+  }
+
   render() {
     const { plant, killPlant } = this.props;
     const singleLink = `/plants/${plant.id}`;
