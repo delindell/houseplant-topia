@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './RoomCard.scss';
+import roomShape from '../../../helpers/data/propz/roomShape';
 
 class RoomCard extends React.Component {
+  static propTypes = {
+    rooms: roomShape.roomShape,
+    deleteRoom: PropTypes.func.isRequired,
+  }
+
   render() {
     const { room, deleteRoom } = this.props;
     const singleLink = `/rooms/${room.id}`;

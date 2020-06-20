@@ -6,6 +6,7 @@ import {
   ModalBody,
   ModalFooter,
 } from 'reactstrap';
+import PropTypes from 'prop-types';
 
 import './PlantFormModal.scss';
 import roomsData from '../../../helpers/data/roomsData';
@@ -13,6 +14,11 @@ import authData from '../../../helpers/data/authData';
 import plantsData from '../../../helpers/data/plantsData';
 
 class PlantFormModal extends React.Component {
+  static propTypes = {
+    getPlant: PropTypes.func.isRequired,
+    formClose: PropTypes.func.isRequired,
+  }
+
   state = {
     isOpen: true,
     modal: true,
