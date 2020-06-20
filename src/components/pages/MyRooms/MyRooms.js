@@ -21,9 +21,15 @@ class MyRooms extends React.Component {
       .catch((err) => console.error('error getting rooms', err));
   }
 
+  deleteRoom = (roomId) => {
+    roomsData.removeRoom(roomId)
+      .then(() => this.getRooms())
+      .catch((err) => console.error('could not delete room', err));
+  }
+
   render() {
     const { rooms } = this.state;
-    const buildRoomCards = rooms.map((room) => <RoomCard room={room} key={room.id} />);
+    const buildRoomCards = rooms.map((room) => <RoomCard room={room} key={room.id} deleteRoom={this.deleteRoom}/>);
     return (
       <div className="MyRooms">
         <h1>MyRooms</h1>
