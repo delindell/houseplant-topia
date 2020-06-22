@@ -20,6 +20,8 @@ class PlantFormModal extends React.Component {
   }
 
   state = {
+    rooms: [],
+    plants: [],
     isOpen: true,
     modal: true,
     plantType: '',
@@ -30,6 +32,15 @@ class PlantFormModal extends React.Component {
     plantHealth: '',
     plantWateringFrequency: 0,
     plantRoomId: '',
+    checked: false,
+  }
+
+  componentDidMount() {
+    roomsData.getRoomsByUid(authData.getUid()).then((rooms) => {
+      plantsData.getPlantsByUid(authData.getUid())
+        .then((plants) => this.setState({ rooms, plants }))
+        .catch((err) => console.error('error building room radio buttons with plants', err));
+    });
   }
 
   toggle = () => {
@@ -39,7 +50,8 @@ class PlantFormModal extends React.Component {
   }
 
   roomChange = (e) => {
-    this.setState({ plantRoomId: e.target.checked });
+    this.setState({ plantRoomId: e.target.value });
+    this.setState({ selectedOption: e.target.checked });
   }
 
   typeChange = (e) => {
@@ -112,26 +124,24 @@ class PlantFormModal extends React.Component {
       plantResource,
       plantWateringFrequency,
       plantHealth,
+      plantRoomId,
+      rooms,
+      plants,
     } = this.state;
 
-    const buildRoomRadios = () => {
-      roomsData.getRoomsByUid(authData.getUid())
-        .then((rooms) => {
-          rooms.forEach((room) => (
-             <div className="form-group form-check">
-               <input
-                 type="radio"
-                 className="form-check-input"
-                 id="room-name"
-                 checked={room.id}
-                 onChange={this.roomChange}
-                 />
-               <label className="form-check-label" htmlFor="room-name">{room.name}</label>
-             </div>
-          ));
-        })
-        .catch((err) => console.error('error building room radio buttons', err));
-    };
+    const buildRoomRadios = () => rooms.map((room, i) => (
+        <div className="form-group form-check">
+          <input
+            type="radio"
+            className="form-check-input"
+            id="room-name"
+            checked={plantRoomId === room.id}
+            value={room.id}
+            onChange={this.roomChange}
+            />
+          <label className="form-check-label" htmlFor="room-name">{room.name}</label>
+        </div>
+    ));
 
     return (
       <div className="PlantFormModal">
