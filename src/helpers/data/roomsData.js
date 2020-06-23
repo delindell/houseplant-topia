@@ -19,6 +19,8 @@ const getRoomsByUid = (uid) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
+const postRoom = (newRoom) => axios.post(`${baseUrl}/rooms.json`, newRoom);
+
 const removeRoom = (roomId) => axios.delete(`${baseUrl}/rooms/${roomId}.json`);
 
 const getSingleRoom = (roomId) => axios.get(`${baseUrl}/rooms/${roomId}.json`);
@@ -27,4 +29,5 @@ export default {
   getRoomsByUid,
   getSingleRoom,
   removeRoom,
+  postRoom,
 };

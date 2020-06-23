@@ -4,10 +4,12 @@ import './MyRooms.scss';
 import authData from '../../../helpers/data/authData';
 import roomsData from '../../../helpers/data/roomsData';
 import RoomCard from '../../shared/RoomCard/RoomCard';
+import RoomFormModal from '../../shared/RoomFormModal/RoomFormModal';
 
 class MyRooms extends React.Component {
   state = {
     rooms: [],
+    formOpen: false,
   }
 
   componentDidMount() {
@@ -27,13 +29,18 @@ class MyRooms extends React.Component {
       .catch((err) => console.error('could not delete room', err));
   }
 
+  formClose = () => {
+    this.setState({ formOpen: false });
+  }
+
   render() {
-    const { rooms } = this.state;
+    const { rooms, formOpen } = this.state;
     const buildRoomCards = rooms.map((room) => <RoomCard room={room} key={room.id} deleteRoom={this.deleteRoom}/>);
     return (
       <div className="MyRooms">
         <h1>MyRooms</h1>
-        <button className="btn btn-success mb-3">Add a new Room</button>
+        <button className="btn btn-success mb-3" onClick={() => this.setState({ formOpen: true })}>Add New Plant</button>
+        { formOpen ? <RoomFormModal formClose={this.formClose} getRooms={this.getRooms} /> : ''}
         <div className="d-flex flex-wrap">
           {buildRoomCards}
         </div>
