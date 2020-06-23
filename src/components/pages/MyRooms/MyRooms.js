@@ -48,7 +48,7 @@ class MyRooms extends React.Component {
     return (
       <div className="MyRooms">
         <h1>MyRooms</h1>
-        <button className="btn btn-success mb-3" onClick={() => this.setState({ formOpen: true })}>Add New Plant</button>
+        <button className="btn btn-success mb-3" onClick={() => this.setState({ formOpen: true })}>Add New Room</button>
         { formOpen ? <RoomFormModal formClose={this.formClose} getRooms={this.getRooms} /> : ''}
         <div className="d-flex flex-wrap">
           {buildRoomCards}
