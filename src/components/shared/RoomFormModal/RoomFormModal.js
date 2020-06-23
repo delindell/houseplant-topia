@@ -10,11 +10,13 @@ import PropTypes from 'prop-types';
 import './RoomFormModal.scss';
 import authData from '../../../helpers/data/authData';
 import roomsData from '../../../helpers/data/roomsData';
+import roomShape from '../../../helpers/data/propz/roomShape';
 
 class RoomFormModal extends React.Component {
   static propTypes = {
     getRooms: PropTypes.func.isRequired,
     formClose: PropTypes.func.isRequired,
+    room: roomShape.roomShape,
   }
 
   state = {
@@ -26,6 +28,20 @@ class RoomFormModal extends React.Component {
     roomSunIntensity: '',
     roomWindows: 0,
     roomSunDuration: 0,
+  }
+
+  componentDidMount() {
+    const { room } = this.props;
+    if (room && room.name) {
+      this.setState({
+        roomName: room.name,
+        roomSunDirection: room.sunDirection,
+        roomSunIntensity: room.sunIntensity,
+        roomWindows: room.numOfWindows,
+        roomSunDuration: room.sunDuration,
+        isEditing: true,
+      });
+    }
   }
 
   toggle = () => {
@@ -77,6 +93,28 @@ class RoomFormModal extends React.Component {
         this.props.getRooms();
       })
       .catch((err) => console.error('unable to save room', err));
+  }
+
+  updatePlant = (e) => {
+    e.preventDefault();
+    this.toggle();
+    const { room, putRoom } = this.props;
+    const {
+      roomName,
+      roomSunDirection,
+      roomSunIntensity,
+      roomWindows,
+      roomSunDuration,
+    } = this.state;
+    const updatedRoom = {
+      name: roomName,
+      numOfWindows: roomWindows * 1,
+      sunDuration: roomSunDuration * 1,
+      sunDirection: roomSunDirection,
+      sunIntensity: roomSunIntensity,
+      uid: authData.getUid(),
+    };
+    putRoom(room.id, updatedRoom);
   }
 
 
@@ -155,7 +193,7 @@ class RoomFormModal extends React.Component {
         <ModalFooter>
         {
           isEditing
-            ? <button className="btn btn-primary" onClick={this.updatePlant}>Update Plant</button>
+            ? <button className="btn btn-primary" onClick={this.updatePlant}>Update Room</button>
             : <button className="btn btn-primary" onClick={this.saveRoom}>Save Room</button>
         }
         </ModalFooter>

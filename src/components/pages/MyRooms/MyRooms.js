@@ -29,13 +29,22 @@ class MyRooms extends React.Component {
       .catch((err) => console.error('could not delete room', err));
   }
 
+  putRoom = (roomId, updatedRoom) => {
+    roomsData.updateRoom(roomId, updatedRoom)
+      .then(() => {
+        this.getRooms();
+        this.setState({ formOpen: false });
+      })
+      .catch((err) => console.error('error updating room', err));
+  }
+
   formClose = () => {
     this.setState({ formOpen: false });
   }
 
   render() {
     const { rooms, formOpen } = this.state;
-    const buildRoomCards = rooms.map((room) => <RoomCard room={room} key={room.id} deleteRoom={this.deleteRoom}/>);
+    const buildRoomCards = rooms.map((room) => <RoomCard room={room} key={room.id} deleteRoom={this.deleteRoom} putRoom={this.putRoom} />);
     return (
       <div className="MyRooms">
         <h1>MyRooms</h1>
