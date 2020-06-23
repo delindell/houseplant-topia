@@ -26,6 +26,16 @@ class MyPlants extends React.Component {
       .catch((err) => console.error('error getting plants', err));
   }
 
+  putPlant = (plantId, updatedPlant) => {
+    plantsData.updatePlant(plantId, updatedPlant)
+      .then(() => {
+        this.getPlants();
+        this.setState({ formOpen: false });
+      })
+      .catch((err) => console.error('error updating plant', err));
+  }
+
+
   killPlant = (plantId) => {
     plantsData.deletePlant(plantId)
       .then(() => this.getPlants())
@@ -38,7 +48,7 @@ class MyPlants extends React.Component {
 
   render() {
     const { plants, formOpen } = this.state;
-    const buildPlantCards = plants.map((plant) => <PlantCard plant={plant} key={plant.id} killPlant={this.killPlant}/>);
+    const buildPlantCards = plants.map((plant) => <PlantCard plant={plant} key={plant.id} putPlant={this.putPlant} killPlant={this.killPlant}/>);
     return (
       <div className="MyPlants">
         <h1>MyPlants</h1>
