@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Button,
   Modal,
   ModalHeader,
   ModalBody,
@@ -33,6 +32,7 @@ class PlantFormModal extends React.Component {
     plantWateringFrequency: 0,
     plantRoomId: '',
     checked: false,
+    isEditing: false,
   }
 
   componentDidMount() {
@@ -41,6 +41,20 @@ class PlantFormModal extends React.Component {
         .then((plants) => this.setState({ rooms, plants }))
         .catch((err) => console.error('error building room radio buttons with plants', err));
     });
+    const { plant } = this.props;
+    if (plant && plant.type) {
+      this.setState({
+        plantType: plant.type,
+        plantName: plant.nickname,
+        plantImgUrl: plant.imgUrl,
+        plantResource: plant.resource,
+        plantNotes: plant.notes,
+        plantHealth: plant.health,
+        plantWateringFrequency: plant.waterFrequency,
+        plantRoomId: plant.roomId,
+        isEditing: true,
+      });
+    }
   }
 
   toggle = () => {
@@ -80,6 +94,34 @@ class PlantFormModal extends React.Component {
 
   wateringChange = (e) => {
     this.setState({ plantWateringFrequency: e.target.value });
+  }
+
+  updatePlant = (e) => {
+    e.preventDefault();
+    this.toggle();
+    const { plant, putPlant } = this.props;
+    const {
+      plantType,
+      plantImgUrl,
+      plantName,
+      plantNotes,
+      plantResource,
+      plantWateringFrequency,
+      plantHealth,
+      plantRoomId,
+    } = this.state;
+    const updatedPlant = {
+      type: plantType,
+      nickname: plantName,
+      imgUrl: plantImgUrl,
+      resource: plantResource,
+      health: plantHealth,
+      note: plantNotes,
+      waterFrequency: plantWateringFrequency * 1,
+      roomId: plantRoomId,
+      uid: authData.getUid(),
+    };
+    putPlant(plant.id, updatedPlant);
   }
 
   savePlant = (e) => {
@@ -126,10 +168,10 @@ class PlantFormModal extends React.Component {
       plantHealth,
       plantRoomId,
       rooms,
-      plants,
+      isEditing,
     } = this.state;
 
-    const buildRoomRadios = () => rooms.map((room, i) => (
+    const buildRoomRadios = () => rooms.map((room) => (
         <div className="form-group form-check">
           <input
             type="radio"
@@ -226,7 +268,11 @@ class PlantFormModal extends React.Component {
           </form>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={this.savePlant}>Save Plant</Button>{' '}
+        {
+          isEditing
+            ? <button className="btn btn-primary" onClick={this.updatePlant}>Update Plant</button>
+            : <button className="btn btn-primary" onClick={this.savePlant}>Save Plant</button>
+        }
         </ModalFooter>
       </Modal>
       </div>

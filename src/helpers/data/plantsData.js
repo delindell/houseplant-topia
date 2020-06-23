@@ -34,6 +34,8 @@ const getPlantsInRoomByRoomId = (roomId) => new Promise((resolve, reject) => {
     });
 });
 
+const updatePlant = (plantId, updatedPlant) => axios.put(`${baseUrl}/plants/${plantId}.json`, updatedPlant);
+
 const postPlant = (newPlant) => axios.post(`${baseUrl}/plants.json`, newPlant);
 
 const getSinglePlant = (plantId) => axios.get(`${baseUrl}/plants/${plantId}.json`);
@@ -46,4 +48,5 @@ export default {
   deletePlant,
   getPlantsInRoomByRoomId,
   postPlant,
+  updatePlant,
 };
