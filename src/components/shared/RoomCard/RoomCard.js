@@ -3,15 +3,26 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './RoomCard.scss';
 import roomShape from '../../../helpers/data/propz/roomShape';
+import RoomFormModal from '../RoomFormModal/RoomFormModal';
 
 class RoomCard extends React.Component {
   static propTypes = {
     rooms: roomShape.roomShape,
     deleteRoom: PropTypes.func.isRequired,
+    putRoom: PropTypes.func.isRequired,
+  }
+
+  state = {
+    formOpen: false,
+  }
+
+  formClose = () => {
+    this.setState({ formOpen: false });
   }
 
   render() {
-    const { room, deleteRoom } = this.props;
+    const { formOpen } = this.state;
+    const { room, deleteRoom, putRoom } = this.props;
     const singleLink = `/rooms/${room.id}`;
 
     return (
@@ -28,7 +39,8 @@ class RoomCard extends React.Component {
             <li className="list-group-item">Sunlight Intensity: {room.sunIntensity}</li>
           </ul>
           <Link className="btn btn-secondary mt-1 mb-1" to={singleLink}>View Plants this Room</Link>
-          <button className="btn btn-success mb-1">Edit Room Details</button>
+          <button className="btn btn-success mb-1" onClick={() => this.setState({ formOpen: true })}>Edit Room Details</button>
+          { formOpen ? <RoomFormModal formClose={this.formClose} room={room} putRoom={putRoom}/> : ''}
         </div>
       </div>
     );
