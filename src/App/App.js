@@ -57,6 +57,7 @@ class App extends React.Component {
   }
 
   render() {
+    // smash.getPlantsByRoom();
     const { authed } = this.state;
 
     return (

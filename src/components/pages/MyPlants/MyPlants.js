@@ -7,6 +7,7 @@ import PlantCard from '../../shared/PlantCard/PlantCard';
 import PlantFormModal from '../../shared/PlantFormModal/PlantFormModal';
 
 import './MyPlants.scss';
+import smash from '../../../helpers/data/smash';
 
 
 class MyPlants extends React.Component {
@@ -17,6 +18,7 @@ class MyPlants extends React.Component {
 
   componentDidMount() {
     this.getPlants();
+    smash.getPlantsByRoom();
   }
 
   getPlants = () => {
