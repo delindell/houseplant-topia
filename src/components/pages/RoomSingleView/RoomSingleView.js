@@ -2,10 +2,12 @@ import React from 'react';
 
 import './RoomSingleView.scss';
 import roomsData from '../../../helpers/data/roomsData';
+import plantsData from '../../../helpers/data/plantsData';
 
 class RoomSingleView extends React.Component {
   state = {
     room: {},
+    plants: [],
   }
 
   componentDidMount() {
@@ -13,6 +15,9 @@ class RoomSingleView extends React.Component {
     roomsData.getSingleRoom(roomId)
       .then((response) => this.setState({ room: response.data }))
       .catch((err) => console.error('error getting single room', err));
+    plantsData.getPlantsInRoomByRoomId(roomId).then((plants) => {
+      this.setState({ plants });
+    });
   }
 
   render() {

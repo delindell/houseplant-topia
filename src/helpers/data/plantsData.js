@@ -31,7 +31,8 @@ const getPlantsInRoomByRoomId = (roomId) => new Promise((resolve, reject) => {
           plants.push(newPlant);
         });
       }
-    });
+      resolve(plants);
+    }).catch((err) => reject(err));
 });
 
 const updatePlant = (plantId, updatedPlant) => axios.put(`${baseUrl}/plants/${plantId}.json`, updatedPlant);

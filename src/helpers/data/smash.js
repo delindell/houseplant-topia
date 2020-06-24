@@ -6,18 +6,32 @@ const getPlantsByRoom = () => new Promise((resolve, reject) => {
   plantsData.getPlantsByUid(authData.getUid()).then((plants) => {
     roomsData.getRoomsByUid(authData.getUid()).then((rooms) => {
       const plantsInRoom = [];
-      plants.forEach((plant) => {
-        const roomWithPlant = { room: {}, ...plant };
-        rooms.forEach((room) => {
-          const plantInsideRoom = plant.find((x) => x.roomId === room.id);
-          roomWithPlant.room = plantInsideRoom;
-          plantsInRoom.push(roomWithPlant);
-        });
+      rooms.forEach((room) => {
+        const roomWithPlants = { ...room };
+        const plantInsideRoom = plants.filter((x) => x.roomId === room.id);
+        roomWithPlants.plants = plantInsideRoom;
+        plantsInRoom.push(roomWithPlants);
       });
       resolve(plantsInRoom);
-      console.log('smash', plantsInRoom);
+      console.log('plants In room', plantsInRoom);
     });
   }).catch((err) => reject(err));
 });
 
-export default { getPlantsByRoom };
+const getRoomPlantIsIn = () => new Promise((resolve, reject) => {
+  plantsData.getPlantsByUid(authData.getUid()).then((plants) => {
+    roomsData.getRoomsByUid(authData.getUid()).then((rooms) => {
+      const plantWithRoom = [];
+      plants.forEach((plant) => {
+        const singlePlant = { ...plant };
+        const room = rooms.find((x) => x.id === singlePlant.roomId);
+        singlePlant.room = room;
+        plantWithRoom.push(singlePlant);
+        console.log('plant with room', plantWithRoom);
+      });
+      resolve(plantWithRoom);
+    });
+  }).catch((err) => reject(err));
+});
+
+export default { getPlantsByRoom, getRoomPlantIsIn };

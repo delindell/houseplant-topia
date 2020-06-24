@@ -14,7 +14,7 @@ import plantsData from '../../../helpers/data/plantsData';
 
 class PlantFormModal extends React.Component {
   static propTypes = {
-    getPlant: PropTypes.func.isRequired,
+    getPlants: PropTypes.func.isRequired,
     formClose: PropTypes.func.isRequired,
   }
 
@@ -29,6 +29,7 @@ class PlantFormModal extends React.Component {
     plantResource: '',
     plantNotes: '',
     plantHealth: '',
+    plantDateCreated: '',
     plantWateringFrequency: 0,
     plantRoomId: '',
     checked: false,
@@ -53,6 +54,7 @@ class PlantFormModal extends React.Component {
         plantWateringFrequency: plant.waterFrequency,
         plantRoomId: plant.roomId,
         isEditing: true,
+        plantDateCreated: plant.dateCreated,
       });
     }
   }
@@ -109,6 +111,7 @@ class PlantFormModal extends React.Component {
       plantWateringFrequency,
       plantHealth,
       plantRoomId,
+      plantDateCreated,
     } = this.state;
     const updatedPlant = {
       type: plantType,
@@ -117,6 +120,7 @@ class PlantFormModal extends React.Component {
       resource: plantResource,
       health: plantHealth,
       note: plantNotes,
+      dateCreated: plantDateCreated,
       waterFrequency: plantWateringFrequency * 1,
       roomId: plantRoomId,
       uid: authData.getUid(),
@@ -259,6 +263,7 @@ class PlantFormModal extends React.Component {
               <label htmlFor="plant-water-frequency">How Often Does it Need to be Watered?</label>
               <input
                 type="number"
+                min="0"
                 className="form-control"
                 id="plant-water-frequency"
                 value={plantWateringFrequency}
