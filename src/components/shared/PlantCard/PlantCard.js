@@ -33,11 +33,11 @@ class PlantCard extends React.Component {
         </div>
         <img className="card-img-top" src={plant.imgUrl} alt="Plant" />
         <div className="card-body">
-          <p className="card-text">Location: {plant.roomId}</p>
+          <p className="card-text">Location: {plant.room ? plant.room.name : 'lost'}</p>
           <div className="button-container">
             <Link className="btn btn-warning mr-3" to={singleLink}>View</Link>
             <button className="btn btn-success mb-3" onClick={() => this.setState({ formOpen: true })}>Edit Plant</button>
-          { formOpen ? <PlantFormModal formClose={this.formClose} plant={plant} putPlant={putPlant}/> : ''}
+          { formOpen ? <PlantFormModal formClose={this.formClose} plant={plant} key={plant.id} putPlant={putPlant} getPlant={this.props.getPlants}/> : ''}
           </div>
         </div>
         </div>

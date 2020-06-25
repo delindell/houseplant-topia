@@ -172,6 +172,7 @@ class RoomFormModal extends React.Component {
               <label htmlFor="room-windows">Number of Windows</label>
               <input
                 type="number"
+                min="0"
                 className="form-control"
                 id="room-windows"
                 value={roomWindows}
@@ -182,6 +183,7 @@ class RoomFormModal extends React.Component {
               <label htmlFor="room-sun-duration">Sunlight Duration</label>
               <input
                 type="number"
+                min="0"
                 className="form-control"
                 id="room-sun-duration"
                 value={roomSunDuration}

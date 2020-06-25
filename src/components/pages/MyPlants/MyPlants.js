@@ -7,6 +7,7 @@ import PlantCard from '../../shared/PlantCard/PlantCard';
 import PlantFormModal from '../../shared/PlantFormModal/PlantFormModal';
 
 import './MyPlants.scss';
+import smash from '../../../helpers/data/smash';
 
 
 class MyPlants extends React.Component {
@@ -20,8 +21,7 @@ class MyPlants extends React.Component {
   }
 
   getPlants = () => {
-    const uid = authData.getUid();
-    plantsData.getPlantsByUid(uid)
+    smash.getRoomPlantIsIn()
       .then((plants) => this.setState({ plants }))
       .catch((err) => console.error('error getting plants', err));
   }
@@ -48,7 +48,7 @@ class MyPlants extends React.Component {
 
   render() {
     const { plants, formOpen } = this.state;
-    const buildPlantCards = plants.map((plant) => <PlantCard plant={plant} key={plant.id} putPlant={this.putPlant} killPlant={this.killPlant}/>);
+    const buildPlantCards = plants.map((plant) => <PlantCard plant={plant} key={plant.id} putPlant={this.putPlant} killPlant={this.killPlant} getPlants={this.getPlants} />);
     return (
       <div className="MyPlants">
         <h1>MyPlants</h1>
