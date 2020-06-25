@@ -8,6 +8,7 @@ import PlantFormModal from '../../shared/PlantFormModal/PlantFormModal';
 
 import './MyPlants.scss';
 import smash from '../../../helpers/data/smash';
+import userData from '../../../helpers/data/userData';
 
 
 class MyPlants extends React.Component {
@@ -18,6 +19,7 @@ class MyPlants extends React.Component {
 
   componentDidMount() {
     this.getPlants();
+    userData.getUserProfileByUid(authData.getUid());
   }
 
   getPlants = () => {
