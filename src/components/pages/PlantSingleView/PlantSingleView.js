@@ -2,6 +2,7 @@ import React from 'react';
 
 import './PlantSingleView.scss';
 import plantsData from '../../../helpers/data/plantsData';
+import wateringData from '../../../helpers/data/wateringData';
 
 class PlantSingleView extends React.Component {
   state = {
@@ -22,6 +23,15 @@ class PlantSingleView extends React.Component {
       .catch((err) => console.error('could not delete plant', err));
   }
 
+  waterPlant = () => {
+    const { plantId } = this.props.match.params;
+    const newWatering = {
+      plantId,
+      timeStamp: Date.now(),
+    };
+    wateringData.addNewWatering(newWatering);
+  }
+
   render() {
     const { plant } = this.state;
     return (
@@ -36,6 +46,7 @@ class PlantSingleView extends React.Component {
           <p>Location: {plant.roomId}</p>
           <p>{plant.nickname} needs to be watered every {plant.waterFrequency} days.</p>
           <a href={plant.resource} className="btn btn-primary">Resource</a>
+          <button className="water-button btn btn-secondary ml-2" onClick={this.waterPlant}>Water Me!</button>
         </div>
       </div>
     );
