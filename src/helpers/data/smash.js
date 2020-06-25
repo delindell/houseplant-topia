@@ -13,7 +13,6 @@ const getPlantsByRoom = () => new Promise((resolve, reject) => {
         plantsInRoom.push(roomWithPlants);
       });
       resolve(plantsInRoom);
-      console.log('plants In room', plantsInRoom);
     });
   }).catch((err) => reject(err));
 });
@@ -27,7 +26,6 @@ const getRoomPlantIsIn = () => new Promise((resolve, reject) => {
         const room = rooms.find((x) => x.id === singlePlant.roomId);
         singlePlant.room = room;
         plantWithRoom.push(singlePlant);
-        console.log('plant with room', plantWithRoom);
       });
       resolve(plantWithRoom);
     });
