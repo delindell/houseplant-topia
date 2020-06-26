@@ -53,7 +53,7 @@ class MyPlants extends React.Component {
     const buildPlantCards = plants.map((plant) => <PlantCard plant={plant} key={plant.id} putPlant={this.putPlant} killPlant={this.killPlant} getPlants={this.getPlants} />);
     return (
       <div className="MyPlants">
-        <h1>MyPlants</h1>
+        <h1 className="mt-2">My Plants</h1>
         <button className="btn btn-success mb-3" onClick={() => this.setState({ formOpen: true })}>Add New Plant</button>
         { formOpen ? <PlantFormModal formClose={this.formClose} getPlants={this.getPlants} /> : ''}
         <div className="d-flex flex-wrap">
