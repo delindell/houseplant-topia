@@ -27,6 +27,7 @@ class UserProfileModal extends React.Component {
         userName: user.name,
         userEmail: user.email,
         userPhoneNumber: user.phone,
+        isEditing: true,
       });
     }
   }

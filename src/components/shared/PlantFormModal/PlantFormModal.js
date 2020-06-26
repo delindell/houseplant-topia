@@ -195,6 +195,7 @@ class PlantFormModal extends React.Component {
         <ModalHeader toggle={this.toggle}>Plant Info</ModalHeader>
         <ModalBody>
           <form className="col-6 offset-3 text-left">
+          <h3>Pick a Room</h3>
             {buildRoomRadios()}
             <div className="form-group">
               <label htmlFor="plant-type">Type</label>
