@@ -15,6 +15,7 @@ const getWateringsByPlantId = (plantId) => new Promise((resolve, reject) => {
           waterings.push(fbWaterings[fbId]);
         });
       }
+      console.log('water from dataa', waterings);
       resolve(waterings);
     })
     .catch((err) => reject(err));

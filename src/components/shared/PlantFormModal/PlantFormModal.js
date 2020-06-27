@@ -6,6 +6,7 @@ import {
   ModalFooter,
 } from 'reactstrap';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 import './PlantFormModal.scss';
 import roomsData from '../../../helpers/data/roomsData';
@@ -147,7 +148,7 @@ class PlantFormModal extends React.Component {
       imgUrl: plantImgUrl,
       resource: plantResource,
       health: plantHealth,
-      dateCreated: Date.now(),
+      dateCreated: moment().format('MMM Do YY'),
       note: plantNotes,
       waterFrequency: plantWateringFrequency * 1,
       roomId: plantRoomId,
