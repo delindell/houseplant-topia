@@ -29,7 +29,7 @@ class PlantCard extends React.Component {
         <div className="card mb-3">
         <div>
         <h3 className="card-title mt-2">{plant.nickname}</h3>
-        <button className="btn btn-outline-success mb-3" onClick={() => killPlant(plant.id)}><i class="fas fa-skull"></i></button>
+        <button className="btn btn-outline-success mb-3" onClick={() => killPlant(plant.id)}><i className="fas fa-skull"></i></button>
         </div>
         <div className="text-center">
         <img className="card-img-top" src={plant.imgUrl} alt="Plant" />
@@ -39,7 +39,7 @@ class PlantCard extends React.Component {
           <div className="button-container">
             <Link className="btn btn-outline-success mr-3 mb-3" to={singleLink}>View</Link>
             <button className="btn btn-outline-success mb-3" onClick={() => this.setState({ formOpen: true })}>Edit Plant</button>
-          { formOpen ? <PlantFormModal formClose={this.formClose} plant={plant} key={plant.id} putPlant={putPlant} getPlant={this.props.getPlants}/> : ''}
+          { formOpen ? <PlantFormModal formClose={this.formClose} plant={plant} key={plant.id + 1} putPlant={putPlant} getPlant={this.props.getPlants}/> : ''}
           </div>
         </div>
         </div>

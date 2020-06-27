@@ -102,35 +102,32 @@ class UserProfileModal extends React.Component {
       <Modal isOpen={modal} toggle={this.toggle} >
       <ModalHeader toggle={this.toggle}>User Info</ModalHeader>
       <ModalBody>
-        <form className="col-6 offset-3 text-left">
+        <form className="col-8 offset-2 text-left">
           <div className="form-group">
-            <label htmlFor="user-name">Name</label>
+            <label htmlFor="user-name"><strong>Name</strong></label>
             <input
               type="text"
               className="form-control"
-              placeholder="Enter Your Name"
               id="user-name"
               value={userName}
               onChange={this.nameChange}
             />
           </div>
           <div className="form-group">
-            <label htmlFor="user-email">Email</label>
+            <label htmlFor="user-email"><strong>Email</strong></label>
             <input
               type="email"
               className="form-control"
-              placeholder="Enter Email"
               id="user-email"
               value={userEmail}
               onChange={this.emailChange}
             />
           </div>
           <div className="form-group">
-            <label htmlFor="user-phone-number">Phone Number</label>
+            <label htmlFor="user-phone-number"><strong>Phone Number</strong></label>
             <input
               type="tel"
               className="form-control"
-              placeholder="Enter Phone Number"
               id="user-phone-number"
               value={userPhoneNumber}
               onChange={this.phoneNumberChange}
@@ -141,8 +138,8 @@ class UserProfileModal extends React.Component {
       <ModalFooter>
       {
         isEditing
-          ? <button className="btn btn-primary" onClick={this.updateProfile}>Update Profile</button>
-          : <button className="btn btn-primary" onClick={this.saveProfile}>Save Profile</button>
+          ? <button className="btn btn-outline-success" onClick={this.updateProfile}>Update Profile</button>
+          : <button className="btn btn-outline-success" onClick={this.saveProfile}>Save Profile</button>
       }
       </ModalFooter>
     </Modal>

@@ -23,12 +23,12 @@ class RoomSingleView extends React.Component {
   render() {
     const { room, plants } = this.state;
     const buildPlantsInsideRoom = () => plants.map((plant) => (
-      <div class="card col-3 m-3">
+      <div className="card col-3 m-3">
         <div className="plant-image text-center">
-          <img class="card-img-top" src={plant.imgUrl} alt={plant.nickname} />
+          <img className="card-img-top" src={plant.imgUrl} alt={plant.nickname} />
         </div>
-        <div class="card-body">
-          <h2 class="card-text">{plant.nickname}</h2>
+        <div className="card-body">
+          <h2 className="card-text">{plant.nickname}</h2>
         </div>
       </div>
     ));

@@ -1,6 +1,13 @@
+@import '../../../styles/variables';
+
 .PlantCard {
-  display: block;
+  .card {
+    border-radius: 5%;
+    border: solid 3px $spearMint
+  }
   img {
     text-align: center;
+    border-radius: 10%;
+    border: solid 3px $lime;
   }
 }

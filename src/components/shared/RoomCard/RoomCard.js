@@ -30,7 +30,7 @@ class RoomCard extends React.Component {
         <div className="card">
           <div className="card-header">
             <h3><strong>{room.name}</strong></h3>
-            <button className="btn btn-primary ml-3" onClick={() => deleteRoom(room.id)}>X</button>
+            <button className="btn btn-outline-success ml-3" onClick={() => deleteRoom(room.id)}><i className="far fa-trash-alt"></i></button>
           </div>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">Number of Windows: {room.numOfWindows}</li>
@@ -38,8 +38,8 @@ class RoomCard extends React.Component {
             <li className="list-group-item">Sunlight Direction: {room.sunDirection}</li>
             <li className="list-group-item">Sunlight Intensity: {room.sunIntensity}</li>
           </ul>
-          <Link className="btn btn-secondary mt-1 mb-1" to={singleLink}>View Plants this Room</Link>
-          <button className="btn btn-success mb-1" onClick={() => this.setState({ formOpen: true })}>Edit Room Details</button>
+          <Link className="btn btn-outline-success m-2" to={singleLink}>View Plants this Room</Link>
+          <button className="btn btn-outline-success m-2" onClick={() => this.setState({ formOpen: true })}>Edit Room Details</button>
           { formOpen ? <RoomFormModal formClose={this.formClose} room={room} putRoom={putRoom}/> : ''}
         </div>
       </div>

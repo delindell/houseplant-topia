@@ -134,42 +134,39 @@ class RoomFormModal extends React.Component {
         <Modal isOpen={modal} toggle={this.toggle} >
         <ModalHeader toggle={this.toggle}>Room Info</ModalHeader>
         <ModalBody>
-          <form className="col-6 offset-3 text-left">
+          <form className="col-8 offset-2 text-left">
             <div className="form-group">
-              <label htmlFor="room-name">Room Name</label>
+              <label htmlFor="room-name"><strong>Room Name</strong></label>
               <input
                 type="text"
                 className="form-control"
-                placeholder="Enter Name of the Room"
                 id="room-name"
                 value={roomName}
                 onChange={this.nameChange}
               />
             </div>
             <div className="form-group">
-              <label htmlFor="room-sun-direction">Sunlight Direction</label>
+              <label htmlFor="room-sun-direction"><strong>Sunlight Direction</strong></label>
               <input
                 type="text"
                 className="form-control"
-                placeholder="Enter Sun Direction"
                 id="room-sun-direction"
                 value={roomSunDirection}
                 onChange={this.sunDirectionChange}
               />
             </div>
             <div className="form-group">
-              <label htmlFor="room-sun-intensity">Sunlight Intensity</label>
+              <label htmlFor="room-sun-intensity"><strong>Sunlight Intensity</strong></label>
               <input
                 type="text"
                 className="form-control"
-                placeholder="Enter Sun Intensity"
                 id="room-sun-intensity"
                 value={roomSunIntensity}
                 onChange={this.sunIntensityChange}
               />
             </div>
             <div className="form-group">
-              <label htmlFor="room-windows">Number of Windows</label>
+              <label htmlFor="room-windows"><strong>Number of Windows</strong></label>
               <input
                 type="number"
                 min="0"
@@ -180,7 +177,7 @@ class RoomFormModal extends React.Component {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="room-sun-duration">Sunlight Duration</label>
+              <label htmlFor="room-sun-duration"><strong>Sunlight Duration</strong></label>
               <input
                 type="number"
                 min="0"
@@ -195,8 +192,8 @@ class RoomFormModal extends React.Component {
         <ModalFooter>
         {
           isEditing
-            ? <button className="btn btn-primary" onClick={this.updatePlant}>Update Room</button>
-            : <button className="btn btn-primary" onClick={this.saveRoom}>Save Room</button>
+            ? <button className="btn btn-outline-success" onClick={this.updatePlant}>Update Room</button>
+            : <button className="btn btn-outline-success" onClick={this.saveRoom}>Save Room</button>
         }
         </ModalFooter>
       </Modal>

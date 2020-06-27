@@ -1,5 +1,6 @@
 import axios from 'axios';
 import firebaseConfig from '../apiKeys.json';
+import authData from './authData';
 
 const baseUrl = firebaseConfig.firebaseKeys.databaseURL;
 
@@ -28,7 +29,9 @@ const getPlantsInRoomByRoomId = (roomId) => new Promise((resolve, reject) => {
         Object.keys(allPlants).forEach((fbId) => {
           const newPlant = allPlants[fbId];
           newPlant.id = fbId;
-          plants.push(newPlant);
+          if (newPlant.uid === authData.getUid()) {
+            plants.push(newPlant);
+          }
         });
       }
       resolve(plants);

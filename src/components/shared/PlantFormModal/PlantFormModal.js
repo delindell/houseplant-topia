@@ -6,6 +6,7 @@ import {
   ModalFooter,
 } from 'reactstrap';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 import './PlantFormModal.scss';
 import roomsData from '../../../helpers/data/roomsData';
@@ -119,7 +120,7 @@ class PlantFormModal extends React.Component {
       imgUrl: plantImgUrl,
       resource: plantResource,
       health: plantHealth,
-      note: plantNotes,
+      notes: plantNotes,
       dateCreated: plantDateCreated,
       waterFrequency: plantWateringFrequency * 1,
       roomId: plantRoomId,
@@ -147,7 +148,7 @@ class PlantFormModal extends React.Component {
       imgUrl: plantImgUrl,
       resource: plantResource,
       health: plantHealth,
-      dateCreated: Date.now(),
+      dateCreated: moment().format('MMM Do YY'),
       note: plantNotes,
       waterFrequency: plantWateringFrequency * 1,
       roomId: plantRoomId,
@@ -194,44 +195,41 @@ class PlantFormModal extends React.Component {
         <Modal isOpen={modal} toggle={this.toggle} >
         <ModalHeader toggle={this.toggle}>Plant Info</ModalHeader>
         <ModalBody>
-          <form className="col-6 offset-3 text-left">
-          <h3>Pick a Room</h3>
+          <form className="col-8 offset-2 text-left">
+          <h5>Pick a Room</h5>
             {buildRoomRadios()}
             <div className="form-group">
               <label htmlFor="plant-type">Type</label>
               <input
                 type="text"
                 className="form-control"
-                placeholder="Enter Type of House Plant"
                 id="plant-type"
                 value={plantType}
                 onChange={this.typeChange}
               />
             </div>
             <div className="form-group">
-              <label htmlFor="plant-name">Name</label>
+              <label htmlFor="plant-name"><strong>Name</strong></label>
               <input
                 type="text"
                 className="form-control"
-                placeholder="Enter Name of House Plant"
                 id="plant-name"
                 value={plantName}
                 onChange={this.nameChange}
               />
             </div>
             <div className="form-group">
-              <label htmlFor="plant-image">Image</label>
+              <label htmlFor="plant-image"><strong>Image</strong></label>
               <input
                 type="text"
                 className="form-control"
-                placeholder="Enter Image of Plant"
                 id="plant-image"
                 value={plantImgUrl}
                 onChange={this.imageChange}
               />
             </div>
             <div className="form-group">
-              <label htmlFor="plant-resource">Resource</label>
+              <label htmlFor="plant-resource"><strong>Resource</strong></label>
               <input
                 type="text"
                 className="form-control"
@@ -241,7 +239,7 @@ class PlantFormModal extends React.Component {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="plant-health">Health</label>
+              <label htmlFor="plant-health"><strong>Health</strong></label>
               <input
                 type="text"
                 className="form-control"
@@ -251,7 +249,7 @@ class PlantFormModal extends React.Component {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="plant-notes">Notes</label>
+              <label htmlFor="plant-notes"><strong>Notes</strong></label>
               <input
                 type="text"
                 className="form-control"
@@ -261,7 +259,7 @@ class PlantFormModal extends React.Component {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="plant-water-frequency">How Often Does it Need to be Watered?</label>
+              <label htmlFor="plant-water-frequency"><strong>How many Days between waterings?</strong></label>
               <input
                 type="number"
                 min="0"
@@ -276,8 +274,8 @@ class PlantFormModal extends React.Component {
         <ModalFooter>
         {
           isEditing
-            ? <button className="btn btn-primary" onClick={this.updatePlant}>Update Plant</button>
-            : <button className="btn btn-primary" onClick={this.savePlant}>Save Plant</button>
+            ? <button className="btn btn-outline-success" onClick={this.updatePlant}>Update Plant</button>
+            : <button className="btn btn-outline-success" onClick={this.savePlant}>Save Plant</button>
         }
         </ModalFooter>
       </Modal>

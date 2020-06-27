@@ -47,7 +47,7 @@ class MyRooms extends React.Component {
     const buildRoomCards = rooms.map((room) => <RoomCard room={room} key={room.id} deleteRoom={this.deleteRoom} putRoom={this.putRoom} />);
     return (
       <div className="MyRooms">
-        <h1>MyRooms</h1>
+        <h1>My Rooms</h1>
         <button className="btn btn-success mb-3" onClick={() => this.setState({ formOpen: true })}>Add New Room</button>
         { formOpen ? <RoomFormModal formClose={this.formClose} getRooms={this.getRooms} /> : ''}
         <div className="d-flex flex-wrap">
