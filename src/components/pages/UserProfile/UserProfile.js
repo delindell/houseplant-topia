@@ -35,21 +35,21 @@ class UserProfile extends React.Component {
     const { formOpen, profile, user } = this.state;
     return (
       <div className="UserProfile">
-        <h1>Profile Page</h1>
+        <h1 className="mt-2">Profile Page</h1>
         {
           profile
             ? (
             <div className="user-info">
-              <h1>{user.name}</h1>
-              <p>{user.email}</p>
-              <p>{user.phone}</p>
-              <button className="btn btn-primary btn-lg m-3" onClick={() => this.setState({ formOpen: true })}>Edit Your Profile</button>
+              <h3 className="m-3">{user.name}</h3>
+              <p>Email: {user.email}</p>
+              <p>Phone Number: {user.phone}</p>
+              <button className="btn btn-success btn-lg m-3" onClick={() => this.setState({ formOpen: true })}>Edit Your Profile</button>
               { formOpen ? <UserProfileModal formClose={this.formClose} user={user} getUserProfile={this.getUserProfile} /> : '' }
             </div>
             )
             : (
             <div>
-              <button className="btn btn-primary btn-lg m-3" onClick={() => this.setState({ formOpen: true })}>Create A Profile</button>
+              <button className="btn btn-success btn-lg m-3" onClick={() => this.setState({ formOpen: true })}>Create A Profile</button>
               { formOpen ? <UserProfileModal formClose={this.formClose} getUserProfile={this.getUserProfile} /> : '' }
               <h5>Create a user profile so you can recieve email or text alerts reminding you to water your plants!</h5>
             </div>

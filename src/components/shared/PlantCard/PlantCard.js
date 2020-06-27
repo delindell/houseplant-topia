@@ -29,7 +29,7 @@ class PlantCard extends React.Component {
         <div className="card mb-3">
         <div>
         <h3 className="card-title mt-2">{plant.nickname}</h3>
-        <button className="btn btn-outline-success mb-3" onClick={() => killPlant(plant.id)}><i class="fas fa-skull"></i></button>
+        <button className="btn btn-outline-success mb-3" onClick={() => killPlant(plant.id)}><i className="fas fa-skull"></i></button>
         </div>
         <div className="text-center">
         <img className="card-img-top" src={plant.imgUrl} alt="Plant" />

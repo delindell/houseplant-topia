@@ -120,7 +120,7 @@ class PlantFormModal extends React.Component {
       imgUrl: plantImgUrl,
       resource: plantResource,
       health: plantHealth,
-      note: plantNotes,
+      notes: plantNotes,
       dateCreated: plantDateCreated,
       waterFrequency: plantWateringFrequency * 1,
       roomId: plantRoomId,

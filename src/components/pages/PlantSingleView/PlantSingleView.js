@@ -17,7 +17,7 @@ class PlantSingleView extends React.Component {
       .then((response) => this.setState({ plant: response.data }))
       .catch((err) => console.error('error getting single plant', err));
     wateringData.getWateringsByPlantId(plantId)
-      .then((waterings) => this.setState({ waterings }));
+      .then((response) => this.setState({ waterings: response.data }));
   }
 
   killPlant = () => {
@@ -37,11 +37,11 @@ class PlantSingleView extends React.Component {
   }
 
   render() {
-    const { plant, watering } = this.state;
-    console.log('watering', watering);
+    const { plant, waterings } = this.state;
+    console.log('watering', waterings);
     return (
       <div className="PlantSingleView">
-        <button className="btn btn-success mt-2 mb-2" onClick={this.killPlant}><i class="fas fa-skull"></i></button>
+        <button className="btn btn-success mt-2 mb-2" onClick={this.killPlant}><i className="fas fa-skull"></i></button>
         <h1>{plant.nickname}</h1>
         <img src={plant.imgUrl} alt="plant"/>
         <div className="plant-info-container mt-3">

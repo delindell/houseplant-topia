@@ -1,8 +1,11 @@
+@import '../../../styles/variables';
+
 .PlantSingleView {
   display: block;
   img {
     max-width: 750px;
     max-height: 750px;
     border-radius: 10%;
+    border: solid 5px $lime;
   }
 }
