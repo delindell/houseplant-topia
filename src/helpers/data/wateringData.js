@@ -15,8 +15,9 @@ const getWateringsByPlantId = (plantId) => new Promise((resolve, reject) => {
           waterings.push(fbWaterings[fbId]);
         });
       }
-      console.log('water from dataa', waterings);
+      waterings.sort((a, b) => b.timeStamp - a.timeStamp);
       resolve(waterings);
+      console.log('watering data', waterings[0].timeStamp);
     })
     .catch((err) => reject(err));
 });
