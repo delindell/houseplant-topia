@@ -15,7 +15,7 @@ class Auth extends React.Component {
     return (
       <div className="Auth text-center">
         <h1>Welcome to House Plant-Topia!</h1>
-        <p>Here you you can keep track of your houseplants, an easy thing to forget!</p>
+        <p>Here you can keep track of your houseplants, an easy thing to forget!</p>
         <button className="btn btn-danger btn-lg" onClick={this.loginClickEvent}><i className="fab fa-google"></i></button>
       </div>
     );
