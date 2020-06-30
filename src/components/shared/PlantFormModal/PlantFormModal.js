@@ -6,7 +6,6 @@ import {
   ModalFooter,
 } from 'reactstrap';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 
 import './PlantFormModal.scss';
 import roomsData from '../../../helpers/data/roomsData';
@@ -148,8 +147,8 @@ class PlantFormModal extends React.Component {
       imgUrl: plantImgUrl,
       resource: plantResource,
       health: plantHealth,
-      dateCreated: moment().format('MMM Do YY'),
-      note: plantNotes,
+      dateCreated: Date.now(),
+      notes: plantNotes,
       waterFrequency: plantWateringFrequency * 1,
       roomId: plantRoomId,
       uid: authData.getUid(),
@@ -177,7 +176,7 @@ class PlantFormModal extends React.Component {
     } = this.state;
 
     const buildRoomRadios = () => rooms.map((room) => (
-        <div className="form-group form-check">
+        <div key={room.id} className="form-group form-check">
           <input
             type="radio"
             className="form-check-input"
@@ -199,7 +198,7 @@ class PlantFormModal extends React.Component {
           <h5>Pick a Room</h5>
             {buildRoomRadios()}
             <div className="form-group">
-              <label htmlFor="plant-type">Type</label>
+              <label htmlFor="plant-type"><strong>Type</strong></label>
               <input
                 type="text"
                 className="form-control"
