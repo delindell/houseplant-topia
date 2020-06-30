@@ -3,7 +3,9 @@
 .PlantCard {
   .card {
     border-radius: 5%;
-    border: solid 3px $spearMint
+    border: solid 3px $spearMint;
+    height: auto;
+    width: auto;
   }
   img {
     text-align: center;

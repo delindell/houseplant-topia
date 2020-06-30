@@ -38,7 +38,7 @@ class RoomCard extends React.Component {
             <li className="list-group-item">Sunlight Direction: {room.sunDirection}</li>
             <li className="list-group-item">Sunlight Intensity: {room.sunIntensity}</li>
           </ul>
-          <Link className="btn btn-outline-success m-2" to={singleLink}>View Plants this Room</Link>
+          <Link className="btn btn-outline-success m-2" key={room.id} to={singleLink}>View Plants this Room</Link>
           <button className="btn btn-outline-success m-2" onClick={() => this.setState({ formOpen: true })}>Edit Room Details</button>
           { formOpen ? <RoomFormModal formClose={this.formClose} room={room} putRoom={putRoom}/> : ''}
         </div>

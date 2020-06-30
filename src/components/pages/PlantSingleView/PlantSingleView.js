@@ -37,8 +37,11 @@ class PlantSingleView extends React.Component {
       plantId,
       timeStamp: Date.now(),
     };
-    wateringData.addNewWatering(newWatering);
-    this.plantInfo();
+    wateringData.addNewWatering(newWatering)
+      .then(() => {
+        this.plantInfo();
+      })
+      .catch((err) => console.error('could not water', err));
   }
 
   render() {
@@ -46,8 +49,8 @@ class PlantSingleView extends React.Component {
     // eslint-disable-next-line consistent-return
     const formatedDate = () => {
       if (waterings[0] !== undefined) {
-        const dateFormated = moment(waterings[0].timeStamp).format('MMM Do YY');
-        return dateFormated;
+        const date = moment(waterings[0].timeStamp).format('MMM Do, YY');
+        return date;
       }
     };
     return (

@@ -77,7 +77,7 @@ class App extends React.Component {
             </div>
           </React.Fragment>
         </BrowserRouter>
-        <footer>HousePlant-Topia &copy;2020 Davis Lindell</footer>
+        <footer><h4>HousePlant-Topia &copy;2020 Davis Lindell</h4></footer>
       </div>
     );
   }

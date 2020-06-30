@@ -28,11 +28,6 @@ class MyNavBar extends React.Component {
     this.setState({ isOpen: !this.state.isOpen });
   }
 
-  logoutEvent = (e) => {
-    e.preventDefault();
-    firebase.auth().signOut();
-  }
-
   render() {
     const { isOpen } = this.state;
 
@@ -42,16 +37,16 @@ class MyNavBar extends React.Component {
         return (
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/plants'>My Plants</NavLink>
+              <NavLink className="mt-1" tag={RRNavLink} to='/plants'>My Plants</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/rooms'>My Rooms</NavLink>
+              <NavLink className="mt-1" tag={RRNavLink} to='/rooms'>My Rooms</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/profile'>My Profile</NavLink>
+              <NavLink className="mt-1" tag={RRNavLink} to='/profile'>My Profile</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="btn" onClick={this.logoutEvent}>Logout</NavLink>
+              <NavLink className="btn" onClick={() => firebase.auth().signOut()}>Logout</NavLink>
             </NavItem>
           </Nav>
         );
