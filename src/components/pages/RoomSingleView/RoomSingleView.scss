@@ -1,11 +1,13 @@
+@import '../../../styles/variables';
+
 .RoomSingleView {
   .card { 
     padding: 0;
   } img {
-    max-width: 250px;
-    max-height: 250px;
-    min-width: 250px;
-    min-height: 250px;
+    width: 80%;
+    height: auto;
+    border-radius: 80%;
+    border: solid 2px $lime
   } h2 {
     text-decoration: underline;
   } 
