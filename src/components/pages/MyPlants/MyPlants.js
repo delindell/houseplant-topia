@@ -9,7 +9,6 @@ import PlantFormModal from '../../shared/PlantFormModal/PlantFormModal';
 import './MyPlants.scss';
 import smash from '../../../helpers/data/smash';
 import userData from '../../../helpers/data/userData';
-import twilioData from '../../../helpers/data/twilioData';
 
 
 class MyPlants extends React.Component {
@@ -49,19 +48,11 @@ class MyPlants extends React.Component {
     this.setState({ formOpen: false });
   }
 
-  sendSMS = () => {
-    const numFromFB = '5024359443';
-    const smsNum = `+1${numFromFB}`;
-    const message = 'got message from app';
-    twilioData.sendSMS(smsNum, message);
-  }
-
   render() {
     const { plants, formOpen } = this.state;
     const buildPlantCards = plants.map((plant) => <PlantCard plant={plant} key={plant.id} putPlant={this.putPlant} killPlant={this.killPlant} getPlants={this.getPlants} />);
     return (
       <div className="MyPlants">
-      <button onClick={this.sendSMS}>i am a button</button>
         <h1 className="mt-2">My Plants</h1>
         <button className="btn btn-success mb-3" onClick={() => this.setState({ formOpen: true })}>Add New Plant</button>
         { formOpen ? <PlantFormModal formClose={this.formClose} getPlants={this.getPlants} /> : ''}
