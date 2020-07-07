@@ -4,15 +4,26 @@ import moment from 'moment';
 import './PlantSingleView.scss';
 import plantsData from '../../../helpers/data/plantsData';
 import wateringData from '../../../helpers/data/wateringData';
+import twilioData from '../../../helpers/data/twilioData';
+import userData from '../../../helpers/data/userData';
+import authData from '../../../helpers/data/authData';
 
 class PlantSingleView extends React.Component {
   state = {
     plant: {},
     waterings: [],
+    user: {},
   }
 
   componentDidMount() {
     this.plantInfo();
+    this.userInfo();
+  }
+
+  userInfo = () => {
+    userData.getUserProfileByUid(authData.getUid())
+      .then((response) => this.setState({ user: response }))
+      .catch((err) => console.error('error getting user data in single plant view', err));
   }
 
   plantInfo = () => {
@@ -40,9 +51,17 @@ class PlantSingleView extends React.Component {
     wateringData.addNewWatering(newWatering)
       .then(() => {
         this.plantInfo();
+        this.sendSMS();
       })
       .catch((err) => console.error('could not water', err));
   }
+
+  sendSMS = () => {
+    const { plant, user } = this.state;
+    const smsNum = `+1${user.phone}`;
+    const message = `${plant.nickname} said, "Thanks for watering me! Please remember to water me again in ${plant.waterFrequency} days!"`;
+    twilioData.sendSMS(smsNum, message);
+  };
 
   render() {
     const { plant, waterings } = this.state;
@@ -53,6 +72,7 @@ class PlantSingleView extends React.Component {
         return date;
       }
     };
+
     return (
       <div className="PlantSingleView">
         <button className="btn btn-success mt-2 mb-2" onClick={this.killPlant}><i className="fas fa-skull"></i></button>
