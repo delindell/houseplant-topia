@@ -59,7 +59,7 @@ class PlantSingleView extends React.Component {
   sendSMS = () => {
     const { plant, user } = this.state;
     const smsNum = `+1${user.phone}`;
-    const message = `${plant.nickname} said, "Thanks for watering me!"`;
+    const message = `${plant.nickname} said, "Thanks for watering me! Please remember to water me again in ${plant.waterFrequency} days!"`;
     twilioData.sendSMS(smsNum, message);
   };
 

@@ -4,4 +4,9 @@
   display: block;
   background-color: $lime;
   color: whitesmoke;
+  img {
+    max-height: 50px;
+    max-width: 200px;
+    border-radius: 15%;
+  }
 }
