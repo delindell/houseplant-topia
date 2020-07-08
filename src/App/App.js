@@ -64,19 +64,21 @@ class App extends React.Component {
         <BrowserRouter>
           <React.Fragment>
             <MyNavBar authed={authed}/>
-            <div className="container">
-                <Switch>
-                  <PrivateRoute path='/profile' component={UserProfile} authed={authed} />
-                  <PrivateRoute path='/rooms/:roomId' component={RoomSingleView} authed={authed} />
-                  <PrivateRoute path='/plants/:plantId' component={PlantSingleView} authed={authed} />
-                  <PrivateRoute path='/plants' component={MyPlants} authed={authed} />
-                  <PrivateRoute path='/rooms' component={MyRooms} authed={authed} />
-                  <PublicRoute path='/auth' component={Auth} authed={authed} />
-                  <Redirect from="*" to="/plants" />
-                </Switch>
-            </div>
-          </React.Fragment>
-        </BrowserRouter>
+              <div className="container">
+                <div className="row justify-content-center">
+                  <Switch>
+                    <PrivateRoute path='/profile' component={UserProfile} authed={authed} />
+                    <PrivateRoute path='/rooms/:roomId' component={RoomSingleView} authed={authed} />
+                    <PrivateRoute path='/plants/:plantId' component={PlantSingleView} authed={authed} />
+                    <PrivateRoute path='/plants' component={MyPlants} authed={authed} />
+                    <PrivateRoute path='/rooms' component={MyRooms} authed={authed} />
+                    <PublicRoute path='/auth' component={Auth} authed={authed} />
+                    <Redirect from="*" to="/plants" />
+                  </Switch>
+                </div>
+              </div>
+            </React.Fragment>
+          </BrowserRouter>
         <footer><h4>HousePlant-Topia &copy;2020 Davis Lindell</h4></footer>
       </div>
     );

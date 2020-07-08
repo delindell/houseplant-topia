@@ -74,7 +74,7 @@ class PlantSingleView extends React.Component {
     };
 
     return (
-      <div className="PlantSingleView">
+      <div className="PlantSingleView col-sm-12">
         <button className="btn btn-success mt-2 mb-2" onClick={this.killPlant}><i className="fas fa-skull"></i></button>
         <h1>{plant.nickname}</h1>
         <img src={plant.imgUrl} alt="plant"/>

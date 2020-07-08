@@ -25,7 +25,7 @@ class PlantCard extends React.Component {
     const { plant, killPlant, putPlant } = this.props;
     const singleLink = `/plants/${plant.id}`;
     return (
-      <div className="PlantCard col-4">
+      <div className="PlantCard col-md-4 col-12">
         <div className="card mb-3">
         <div>
         <h3 className="card-title mt-2">{plant.nickname}</h3>

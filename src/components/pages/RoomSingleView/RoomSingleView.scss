@@ -3,6 +3,8 @@
 .RoomSingleView {
   .card { 
     padding: 0;
+    border-radius: 10%;
+    border: solid 2px $lime
   } img {
     width: 80%;
     height: auto;
