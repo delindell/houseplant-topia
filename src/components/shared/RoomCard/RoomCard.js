@@ -26,7 +26,7 @@ class RoomCard extends React.Component {
     const singleLink = `/rooms/${room.id}`;
 
     return (
-      <div className="RoomCard col-3 mb-3">
+      <div className="RoomCard col-md-4 col-12 mb-3">
         <div className="card">
           <div className="card-header">
             <h3><strong>{room.name}</strong></h3>
