@@ -64,8 +64,7 @@ class App extends React.Component {
         <BrowserRouter>
           <React.Fragment>
             <MyNavBar authed={authed}/>
-              <div className="container">
-                <div className="row justify-content-center">
+              <div className="container justify-content-center">
                   <Switch>
                     <PrivateRoute path='/profile' component={UserProfile} authed={authed} />
                     <PrivateRoute path='/rooms/:roomId' component={RoomSingleView} authed={authed} />
@@ -75,7 +74,6 @@ class App extends React.Component {
                     <PublicRoute path='/auth' component={Auth} authed={authed} />
                     <Redirect from="*" to="/plants" />
                   </Switch>
-                </div>
               </div>
             </React.Fragment>
           </BrowserRouter>
