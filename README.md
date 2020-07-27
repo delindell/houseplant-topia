@@ -40,3 +40,20 @@ Keeping track of houseplants can be difficult. With different watering schedules
 ![Modals](https://i.imgur.com/JwR7kRd.png)
 
 ![Modal](https://i.imgur.com/Ezn81Ot.png)
+
+
+## How to run
+
+1. Clone down this repo
+
+1. Navigate to the folder containing the cloned repo
+
+1. Make a project on Firebase and locate the `apiKeysExample.json` inside this repo
+
+1. Copy your API Keys into the example and rename it `apiKeys.json` 
+
+1. In your command line run `npm install` to install required dependencies
+
+1. In your command line run `npm start`
+
+1. In your browser go to `http://localhost:8080`
