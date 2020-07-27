@@ -15,4 +15,28 @@ Keeping track of houseplants can be difficult. With different watering schedules
 
 ## Screenshots
 
+#### Plants Page:
+
 ![Plants Page](https://i.imgur.com/Pl4wFC5.png)
+
+#### Rooms Page:
+
+![Rooms Page](https://i.imgur.com/3LrJMce.png)
+
+#### Plant Single View:
+
+![Plant Single View](https://i.imgur.com/JQFWThJ.png)
+
+#### Room Single View:
+
+![Room Single View](https://i.imgur.com/osgerad.png)
+
+#### Profile Page:
+
+![Profile Page](https://i.imgur.com/JljuW1L.png)
+
+#### Modals:
+
+![Modals](https://i.imgur.com/JwR7kRd.png)
+
+![Modal](https://i.imgur.com/Ezn81Ot.png)
