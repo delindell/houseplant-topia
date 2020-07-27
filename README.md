@@ -15,4 +15,4 @@ Keeping track of houseplants can be difficult. With different watering schedules
 
 ## Screenshots
 
-[Plants Page](https://i.imgur.com/Pl4wFC5.png)
+![Plants Page](https://i.imgur.com/Pl4wFC5.png)
