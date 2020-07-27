@@ -1,5 +1,7 @@
 # Houseplant-Topia!
 
+[Deployed Link!](https://houseplant-topia.web.app/)
+
 ## Description
 
 Keeping track of houseplants can be difficult. With different watering schedules, locations, and tendencies just being a few of the factors that can lead to unfortunate accidents (death).  I wanted to make an app that allowed users to keep track of these plants, through various means, even getting reminders to water them. 
@@ -58,4 +60,3 @@ Keeping track of houseplants can be difficult. With different watering schedules
 
 1. In your browser go to `http://localhost:8080`
 
-###[Check Out the App!](https://houseplant-topia.web.app/)
