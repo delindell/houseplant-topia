@@ -57,3 +57,5 @@ Keeping track of houseplants can be difficult. With different watering schedules
 1. In your command line run `npm start`
 
 1. In your browser go to `http://localhost:8080`
+
+###[Check Out the App!](https://houseplant-topia.web.app/)
